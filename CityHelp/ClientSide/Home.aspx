@@ -96,6 +96,7 @@
                         </div>
                     </div>
 
+
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="card-item">
                             <div class="row">
