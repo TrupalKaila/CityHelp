@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="CityHelp.AdminSide.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title></title>
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Ensure bootstrap CSS is included -->
+    <style>
+        #navbarSupportedContent {
+            justify-content: flex-end; /* Align items to the right */
+        }
+
+        #btnSearch {
+            margin-left: 10px; /* Add some space between the button and other navbar elements */
+        }
+
+        .bg-body-tertiary {
+            background-color: black !important; /* Override Bootstrap's background color */
+        }
+
+        .white-text {
+            color: white !important; /* Override any existing color styles */
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <asp:LinkButton ID="navbarBrand" runat="server" CssClass="navbar-brand white-text" Text="User" />
+                    <asp:Button ID="navbarToggler" runat="server" CssClass="navbar-toggler"
+                        type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></asp:Button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <asp:Button ID="btnLogout" runat="server" CssClass="btn btn-outline-success white-text" Text="Log out" OnClick="LogoutButton_Click" />
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <asp:ContentPlaceHolder ID="cphMainBody" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <!-- Ensure bootstrap and jQuery scripts are included -->
+</body>
+</html>
